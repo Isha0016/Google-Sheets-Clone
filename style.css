@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.toolbar button {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.formula-bar {
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#address {
+    width: 80px;
+    margin-right: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#formula-input {
+    flex: 1;
+    padding: 5px;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.top-row {
+    grid-column: 2;
+    display: flex;
+}
+
+.left-col {
+    grid-row: 2;
+}
+
+.cells {
+    grid-column: 2;
+    grid-row: 2;
+    overflow: auto;
+}
+
+.cell {
+    width: 80px;
+    height: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+
+.modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: move;
+    pointer-events: auto;
+}
+
+.modal-content h2 {
+    margin-top: 0 0 5px 0;
+    font-size: 20px;
+    user-select: none;
+}
+
+.instructions{
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 4px;
+    border-left: 4px solid #006305;
+    margin-bottom: 10px;
+}
+
+.close{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    float: right;
+}
+
+#aiPrompt{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 10px 0 0 10px;
+}
+
+#submitAI{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.ai-selected{
+    background-color: #d0f3ba;
+    color: #006064;
+}
